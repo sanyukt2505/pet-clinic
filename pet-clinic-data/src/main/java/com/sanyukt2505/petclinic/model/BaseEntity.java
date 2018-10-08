@@ -1,0 +1,16 @@
+package com.sanyukt2505.petclinic.model;
+
+import java.io.Serializable;
+
+public class BaseEntity implements Serializable {
+
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(final Long id) {
+        this.id = id;
+    }
+}

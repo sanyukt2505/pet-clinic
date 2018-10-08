@@ -4,7 +4,7 @@
 
 	<groupId>com.sanyukt2505</groupId>
 	<artifactId>pet-clinic</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.6-SNAPSHOT</version>
 	<modules>
 		<module>pet-clinic-data</module>
 		<module>pet-clinic-webapp</module>

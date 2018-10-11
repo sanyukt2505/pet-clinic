@@ -1,12 +1,7 @@
 package com.sanyukt2505.petclinic.services;
 
-import java.util.Set;
+import com.sanyukt2505.petclinic.model.Vet;
 
-public interface VetService {
+public interface VetService extends CrudService<Vet, Long> {
 
-    VetService findById(Long id);
-
-    VetService save(VetService vet);
-
-    Set<VetService> findAll();
 }

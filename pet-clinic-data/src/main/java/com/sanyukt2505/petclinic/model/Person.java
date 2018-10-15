@@ -2,22 +2,22 @@ package com.sanyukt2505.petclinic.model;
 
 public class Person extends BaseEntity {
 
-    private String fName;
-    private String lName;
+    private String firstName;
+    private String lastName;
 
-    public String getfName() {
-        return fName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setfName(final String fName) {
-        this.fName = fName;
+    public void setFirstName(final String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getlName() {
-        return lName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setlName(final String lName) {
-        this.lName = lName;
+    public void setLastName(final String lastName) {
+        this.lastName = lastName;
     }
 }

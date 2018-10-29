@@ -15,16 +15,16 @@ import java.util.Set;
 @Profile("springdatajpa")
 public class OwnerJPAService implements OwnerService {
 
+    private final OwnerRepository ownerRepository;
+    private final PetRepository petRepository;
+    private final PetTypeRepository petTypeRepository;
+
     public OwnerJPAService(final OwnerRepository ownerRepository, final PetRepository petRepository,
                            final PetTypeRepository petTypeRepository) {
         this.ownerRepository = ownerRepository;
         this.petRepository = petRepository;
         this.petTypeRepository = petTypeRepository;
     }
-
-    private final OwnerRepository ownerRepository;
-    private final PetRepository petRepository;
-    private final PetTypeRepository petTypeRepository;
 
     @Override
     public Owner findByLastName(final String lastName) {

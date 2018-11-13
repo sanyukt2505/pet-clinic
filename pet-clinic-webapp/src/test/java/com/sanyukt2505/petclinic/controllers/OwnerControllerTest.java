@@ -58,7 +58,7 @@ class OwnerControllerTest {
 
     @Test
     void findOwnersReturnMultiple() throws Exception {
-        when(ownerService.findAllByLastName(anyString()))
+        when(ownerService.findAllByLastNameLike(anyString()))
                 .thenReturn(Arrays.asList(Owner.builder().id(1L).build(),
                         Owner.builder().id(2L).build()));
 
@@ -72,7 +72,7 @@ class OwnerControllerTest {
 
     @Test
     void findOwnersReturnOne() throws Exception {
-        when(ownerService.findAllByLastName(anyString())).thenReturn(Arrays.asList(Owner.builder().id(1L).build()));
+        when(ownerService.findAllByLastNameLike(anyString())).thenReturn(Arrays.asList(Owner.builder().id(1L).build()));
 
         mockMvc.perform(get("/owners"))
                 .andExpect(status().is3xxRedirection())

@@ -11,10 +11,19 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "pets")
 public class Pet extends BaseEntity {
+
+    @Builder
+    public Pet(final Long id, final PetType petType, final Owner owner, final LocalDate birthDate, final String name, final Set<Visit> visits) {
+        super(id);
+        this.petType = petType;
+        this.owner = owner;
+        this.birthDate = birthDate;
+        this.name = name;
+        this.visits = visits;
+    }
 
     @ManyToOne
     @JoinColumn(name = "type_id")
@@ -32,5 +41,5 @@ public class Pet extends BaseEntity {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
     private Set<Visit> visits = new HashSet<>();
-    
+
 }
